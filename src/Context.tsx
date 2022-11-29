@@ -1,8 +1,9 @@
 import {Children, createContext, ReactNode, useContext, useState} from 'react'
 
-function Context() {
-  const CheckboxContext = createContext({checked: true, checkedSet: (value: boolean) => {}})
+export const CheckboxContext = createContext({checked: true, checkedSet: (value: boolean) => {}})
 
+function Context() {
+  
   const Checkbox = ({children}:{children: ReactNode}) => {
     const [checked, checkedSet] = useState(true)
     return (
@@ -28,10 +29,11 @@ function Context() {
 
   return (
     <Checkbox>
-        <CheckboxLabel />
-        <CheckboxInput />
+      <CheckboxLabel />
+      <CheckboxInput />
     </Checkbox>
   )
+
 }
 
 export default Context
