@@ -1,6 +1,6 @@
 import {Children, createContext, ReactNode, useContext, useState} from 'react'
 
-export const CheckboxContext = createContext({checked: true, checkedSet: (value: boolean) => {}})
+export const CheckboxContext = createContext({checked: true, checkedSet: (value: boolean) => {} })
 
 function Context() {
   
